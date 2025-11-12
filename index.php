@@ -5,7 +5,11 @@ $route = $_GET['route'] ?? 'home';
 
 switch ($route) {
     case 'about':
+        showPage($route);
+        break;
     case 'home':
+        showPage($route);
+        break;
     case 'contact':
         showPage($route);
         break;
@@ -21,5 +25,3 @@ switch ($route) {
     default:
         showPage('404');
 }
-
-include $footer;

@@ -1,15 +1,17 @@
 <?php
 require_once __DIR__ . '/../models/coffeeModel.php';
 
-$header = __DIR__ . '/../paritials/header.php';
-$footer = __DIR__ . '/../paritials/footer.php';
+$header = __DIR__ . '/../partials/header.php';
+$footer = __DIR__ . '/../partials/footer.php';
 
 function showPage($view){
 
     global $header;
     global $footer;
 
-    $view = __DIR__ . "/../views/$view.php";
+    include $header;
+    include __DIR__ . "/../views/$view.php";
+    include $footer;
 }
 
 function showBeverages(){
